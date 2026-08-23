@@ -1,0 +1,6 @@
+104213|gpu|arun|RUNNING|4:21:07|2|dgx8-[03-04]
+104219|gpu|arun|RUNNING|3:58:44|1|dgx8-07
+104244|gpu|mchen|PENDING|0:00|4|(Resources)
+104245|gpu|mchen|PENDING|0:00|4|(Priority)
+104251|cpu|infra|RUNNING|18:22:03|1|cpu-11
+104263|gpu|jlee|PENDING|0:00|1|(ReqNodeNotAvail, UnavailableNodes:dgx8-09)

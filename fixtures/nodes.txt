@@ -1,0 +1,6 @@
+dgx8-03|gpu|allocated|64/0/0/64|gpu:a100:8|
+dgx8-04|gpu|allocated|64/0/0/64|gpu:a100:8|
+dgx8-07|gpu|mixed|8/56/0/64|gpu:a100:8|
+dgx8-09|gpu|drained|0/0/64/64|gpu:a100:8|epilog: GPU2 ECC uncorrectable, 3 consecutive
+cpu-11|cpu|allocated|32/0/0/32|(null)|
+cpu-12|cpu|idle|0/32/0/32|(null)|

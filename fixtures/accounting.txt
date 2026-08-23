@@ -1,0 +1,4 @@
+104101|research|arun|COMPLETED|02:14:38|08:00:00|2|billing=128,cpu=128,gres/gpu=16,node=2
+104102|research|arun|COMPLETED|00:41:02|04:00:00|1|billing=64,cpu=64,gres/gpu=8,node=1
+104118|trading|mchen|TIMEOUT|04:00:01|04:00:00|4|billing=256,cpu=256,gres/gpu=32,node=4
+104120|infra|infra|COMPLETED|18:22:03|24:00:00|1|billing=32,cpu=32,node=1
