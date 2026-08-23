@@ -1,0 +1,31 @@
+name: checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      # Deliberately [dev] and not [server]: the guard is the security-relevant
+      # code and it must type-check and pass its adversarial suite on a machine
+      # with no MCP transport installed at all.
+      - run: pip install -e ".[dev]"
+      - run: ruff check .
+      - run: ruff format --check .
+      - run: mypy
+      - run: pytest -q
+      - name: the surface runs without a Slurm cluster
+        run: |
+          slurm-mcp surface
+          slurm-mcp --fixtures overview
+          slurm-mcp footprint

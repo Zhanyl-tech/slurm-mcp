@@ -1,0 +1,12 @@
+Configuration data as of 2026-08-23T11:02:14
+PriorityType             = priority/multifactor
+PriorityWeightAge        = 1000
+PriorityWeightFairshare  = 10000
+PriorityWeightJobSize    = 1000
+PriorityWeightPartition  = 1000
+PriorityWeightQOS        = 2000
+PriorityDecayHalfLife    = 7-00:00:00
+SchedulerType            = sched/backfill
+SchedulerParameters      = bf_window=4320,bf_resolution=300,bf_max_job_test=500
+SelectType               = select/cons_tres
+SlurmctldHost[0]         = slurmctld
