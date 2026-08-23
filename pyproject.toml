@@ -1,0 +1,57 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "slurm-mcp"
+version = "0.1.0"
+description = "A read-only MCP server exposing Slurm scheduler state to agents, with progressive disclosure and the allowlist enforced in code."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Zhanyl Abdybaeva" }]
+keywords = ["slurm", "mcp", "hpc", "agents", "read-only", "gpu-cluster"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: System Administrators",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3.11",
+  "Topic :: System :: Distributed Computing",
+]
+dependencies = []
+
+[project.optional-dependencies]
+server = ["mcp>=1.2"]
+dev = ["pytest>=8.0", "ruff>=0.6", "mypy>=1.11"]
+
+[project.scripts]
+slurm-mcp = "slurm_mcp.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Zhanyl-tech/slurm-mcp"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/slurm_mcp"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests"]
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.mypy]
+files = ["src", "tests"]
+python_version = "3.11"
+strict = true
+mypy_path = "src"
+
+# `mcp` is an optional extra: the guard, topics and CLI are fully typed and
+# checked without it, and CI installs only [dev] so the security-relevant code
+# is verified on a machine that has no MCP transport at all.
+[[tool.mypy.overrides]]
+module = ["mcp.*"]
+ignore_missing_imports = true

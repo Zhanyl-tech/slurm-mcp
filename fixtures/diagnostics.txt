@@ -1,0 +1,24 @@
+*******************************************************
+sdiag output at Sun Aug 23 11:02:14 2026 (1787654534)
+Data since      Sun Aug 23 00:00:00 2026 (1787616000)
+*******************************************************
+Server thread count:  3
+Agent queue size:     0
+DBD Agent queue size: 0
+
+Jobs submitted: 412
+Jobs started:   398
+Jobs completed: 381
+Jobs canceled:  6
+
+Main schedule statistics (microseconds):
+	Last cycle:   14211
+	Max cycle:    91044
+	Total cycles: 4127
+
+Backfilling stats
+	Total backfilled jobs (since last slurm start): 167
+	Last cycle when: Sun Aug 23 11:01:58 2026
+	Last cycle:      412885
+	Max cycle:       1904221
+	Last depth cycle: 96

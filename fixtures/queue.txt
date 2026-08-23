@@ -1,0 +1,6 @@
+104213|gpu|alice|RUNNING|4:21:07|2|gpu-[03-04]
+104219|gpu|alice|RUNNING|3:58:44|1|gpu-07
+104244|gpu|bob|PENDING|0:00|4|(Resources)
+104245|gpu|bob|PENDING|0:00|4|(Priority)
+104251|cpu|infra|RUNNING|18:22:03|1|cpu-11
+104263|gpu|carol|PENDING|0:00|1|(ReqNodeNotAvail, UnavailableNodes:gpu-09)

@@ -1,0 +1,6 @@
+gpu-03|gpu|allocated|64/0/0/64|gpu:8|
+gpu-04|gpu|allocated|64/0/0/64|gpu:8|
+gpu-07|gpu|mixed|8/56/0/64|gpu:8|
+gpu-09|gpu|drained|0/0/64/64|gpu:8|uncorrectable ECC error on GPU2
+cpu-11|cpu|allocated|32/0/0/32|(null)|
+cpu-12|cpu|idle|0/32/0/32|(null)|
