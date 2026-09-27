@@ -1,0 +1,7 @@
+version: 2
+updates:
+  # Actions are pinned by commit SHA in ci.yml; this proposes the bumps.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
