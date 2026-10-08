@@ -40,8 +40,9 @@ from .topics import TOPICS, Topic, build_argv
 
 log = logging.getLogger("slurm_mcp")
 
-#: Slurm calls block indefinitely when the accounting path is degraded, which
-#: is a real incident shape. Never wait forever on behalf of an agent.
+#: Slurm calls such as sacct can block with no error when the accounting path
+#: is degraded (slurm-rca-bench scenario S01: sacct hung while scheduling
+#: continued). Never wait forever on behalf of an agent.
 TIMEOUT_SECONDS = 20.0
 
 #: Filters that fixture mode can apply itself, as an exact match against the
